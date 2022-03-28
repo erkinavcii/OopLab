@@ -36,8 +36,9 @@
             this.radioButton_Normal_Settings = new System.Windows.Forms.RadioButton();
             this.radioButton_Custom_Settings = new System.Windows.Forms.RadioButton();
             this.groupBox_Settings = new System.Windows.Forms.GroupBox();
-            this.checkedListBox_RoundShapes = new System.Windows.Forms.CheckedListBox();
             this.button_Save_Settings = new System.Windows.Forms.Button();
+            this.checkedListBox_RoundShapes = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox_Color_Settings = new System.Windows.Forms.CheckedListBox();
             this.groupBox_Settings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,6 +113,7 @@
             // 
             // groupBox_Settings
             // 
+            this.groupBox_Settings.Controls.Add(this.checkedListBox_Color_Settings);
             this.groupBox_Settings.Controls.Add(this.button_Save_Settings);
             this.groupBox_Settings.Controls.Add(this.checkedListBox_RoundShapes);
             this.groupBox_Settings.Controls.Add(this.radioButton_Normal_Settings);
@@ -120,13 +122,23 @@
             this.groupBox_Settings.Controls.Add(this.textBox_SecondNumberCustom_Settings);
             this.groupBox_Settings.Controls.Add(this.radioButton_Hard_Settings);
             this.groupBox_Settings.Controls.Add(this.radioButton_Easy_Settings);
-            this.groupBox_Settings.Location = new System.Drawing.Point(290, 83);
+            this.groupBox_Settings.Location = new System.Drawing.Point(154, 61);
             this.groupBox_Settings.Name = "groupBox_Settings";
-            this.groupBox_Settings.Size = new System.Drawing.Size(612, 274);
+            this.groupBox_Settings.Size = new System.Drawing.Size(786, 294);
             this.groupBox_Settings.TabIndex = 15;
             this.groupBox_Settings.TabStop = false;
             this.groupBox_Settings.Text = "Settings";
             this.groupBox_Settings.Visible = false;
+            // 
+            // button_Save_Settings
+            // 
+            this.button_Save_Settings.Location = new System.Drawing.Point(238, 216);
+            this.button_Save_Settings.Name = "button_Save_Settings";
+            this.button_Save_Settings.Size = new System.Drawing.Size(110, 41);
+            this.button_Save_Settings.TabIndex = 16;
+            this.button_Save_Settings.Text = "Save";
+            this.button_Save_Settings.UseVisualStyleBackColor = true;
+            this.button_Save_Settings.Click += new System.EventHandler(this.button_Save_Settings_Click);
             // 
             // checkedListBox_RoundShapes
             // 
@@ -147,15 +159,19 @@
             this.checkedListBox_RoundShapes.Size = new System.Drawing.Size(153, 148);
             this.checkedListBox_RoundShapes.TabIndex = 15;
             // 
-            // button_Save_Settings
+            // checkedListBox_Color_Settings
             // 
-            this.button_Save_Settings.Location = new System.Drawing.Point(238, 216);
-            this.button_Save_Settings.Name = "button_Save_Settings";
-            this.button_Save_Settings.Size = new System.Drawing.Size(110, 41);
-            this.button_Save_Settings.TabIndex = 16;
-            this.button_Save_Settings.Text = "Save";
-            this.button_Save_Settings.UseVisualStyleBackColor = true;
-            this.button_Save_Settings.Click += new System.EventHandler(this.button_Save_Settings_Click);
+            this.checkedListBox_Color_Settings.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.checkedListBox_Color_Settings.FormattingEnabled = true;
+            this.checkedListBox_Color_Settings.Items.AddRange(new object[] {
+            "Red",
+            "Green",
+            "Blue"});
+            this.checkedListBox_Color_Settings.Location = new System.Drawing.Point(604, 32);
+            this.checkedListBox_Color_Settings.Name = "checkedListBox_Color_Settings";
+            this.checkedListBox_Color_Settings.Size = new System.Drawing.Size(153, 148);
+            this.checkedListBox_Color_Settings.TabIndex = 17;
+            
             // 
             // form_MainGame
             // 
@@ -187,5 +203,6 @@
         private System.Windows.Forms.GroupBox groupBox_Settings;
         private System.Windows.Forms.CheckedListBox checkedListBox_RoundShapes;
         private System.Windows.Forms.Button button_Save_Settings;
+        private System.Windows.Forms.CheckedListBox checkedListBox_Color_Settings;
     }
 }
