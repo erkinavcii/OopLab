@@ -82,6 +82,11 @@ namespace OOP2Lab1
         private void get_Settings_From_Text_File()
         {
             string pathSource = System.IO.Directory.GetCurrentDirectory() + "\\yko.txt";
+            if (!File.Exists(pathSource))  // If the file doesn't exist, the folder will create in this if statement.
+            {
+                StreamWriter writer = new StreamWriter(pathSource);
+                writer.Close();
+            }
             StreamReader reader = new StreamReader(pathSource);
             difficultyLevel = reader.ReadLine();
             firstNumberCustomSettings = Convert.ToInt32(reader.ReadLine());
