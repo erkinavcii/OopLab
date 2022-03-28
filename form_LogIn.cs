@@ -30,7 +30,7 @@ namespace OOP2Lab1
             {
                 mainGameForm = new form_MainGame();
                 mainGameForm.ShowDialog();
-                this.Hide();
+                
             }
             else
             {MessageBox.Show("You entered wrong username or password or both");

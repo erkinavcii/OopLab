@@ -9,7 +9,9 @@ namespace OOP2Lab1
     {
         public string difficultyLevel;
         public List<string> chosenRoundShapes = new List<string> { };
+        public List<string> chosenColors= new List<string> { };
         public int firstNumberCustomSettings = 0, secondNumberCustomSettings = 0;
+        bool color_flag = false;
         public form_MainGame()
         {
             InitializeComponent();
@@ -61,6 +63,10 @@ namespace OOP2Lab1
             {
                 chosenRoundShapes.Add(s);
             }
+            foreach (string s in checkedListBox_Color_Settings.CheckedItems)
+            {
+                chosenColors.Add(s);
+            }
             groupBox_Settings.Visible = false; // To back main menu.
             button_Settings.Visible = true; // To back main menu.
             write_Settings_To_Text_File();
@@ -73,6 +79,10 @@ namespace OOP2Lab1
             writer.WriteLine(firstNumberCustomSettings);
             writer.WriteLine(secondNumberCustomSettings);
             foreach (string s in chosenRoundShapes)
+            {
+                writer.WriteLine(s);
+            }
+            foreach (string s in chosenColors)
             {
                 writer.WriteLine(s);
             }
@@ -92,12 +102,30 @@ namespace OOP2Lab1
             firstNumberCustomSettings = Convert.ToInt32(reader.ReadLine());
             secondNumberCustomSettings = Convert.ToInt32(reader.ReadLine());
             chosenRoundShapes.Clear();
+            chosenColors.Clear();
             while(!reader.EndOfStream)
             {
-                chosenRoundShapes.Add((string)reader.ReadLine());   
+                string s = (string)reader.ReadLine();
+                if (checkedListBox_Color_Settings.Items.Contains(s))
+                {
+                    color_flag = true;
+                }
+                
+                if (color_flag)
+                {
+                    chosenColors.Add(s);
+                }
+                else
+                {
+                    chosenRoundShapes.Add(s);
+                }
+                Console.WriteLine(s);
             }
             reader.Close();
         }
+
+
+
         private void set_Settings()
         {
             if (difficultyLevel=="Easy")
@@ -124,6 +152,14 @@ namespace OOP2Lab1
                 if (index >= 0)
                 {
                     checkedListBox_RoundShapes.SetItemChecked(index, true);
+                }
+            }
+            foreach (string s in chosenColors)
+            {
+                int index = checkedListBox_Color_Settings.FindString(s);
+                if (index >= 0)
+                {
+                    checkedListBox_Color_Settings.SetItemChecked(index, true);
                 }
             }
         }
