@@ -59,6 +59,7 @@ namespace OOP2Lab1
                 MessageBox.Show("Please select a difficulty level!", "Warning");
             }
             chosenRoundShapes.Clear();
+            chosenColors.Clear();
             foreach (string s in checkedListBox_RoundShapes.CheckedItems)
             {
                 chosenRoundShapes.Add(s);
@@ -78,6 +79,7 @@ namespace OOP2Lab1
             writer.WriteLine(difficultyLevel);
             writer.WriteLine(firstNumberCustomSettings);
             writer.WriteLine(secondNumberCustomSettings);
+
             foreach (string s in chosenRoundShapes)
             {
                 writer.WriteLine(s);
