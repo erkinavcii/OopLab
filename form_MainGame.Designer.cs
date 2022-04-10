@@ -36,9 +36,9 @@
             this.radioButton_Normal_Settings = new System.Windows.Forms.RadioButton();
             this.radioButton_Custom_Settings = new System.Windows.Forms.RadioButton();
             this.groupBox_Settings = new System.Windows.Forms.GroupBox();
+            this.checkedListBox_Color_Settings = new System.Windows.Forms.CheckedListBox();
             this.button_Save_Settings = new System.Windows.Forms.Button();
             this.checkedListBox_RoundShapes = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox_Color_Settings = new System.Windows.Forms.CheckedListBox();
             this.groupBox_Settings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,6 +130,19 @@
             this.groupBox_Settings.Text = "Settings";
             this.groupBox_Settings.Visible = false;
             // 
+            // checkedListBox_Color_Settings
+            // 
+            this.checkedListBox_Color_Settings.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.checkedListBox_Color_Settings.FormattingEnabled = true;
+            this.checkedListBox_Color_Settings.Items.AddRange(new object[] {
+            "Red",
+            "Green",
+            "Blue"});
+            this.checkedListBox_Color_Settings.Location = new System.Drawing.Point(604, 32);
+            this.checkedListBox_Color_Settings.Name = "checkedListBox_Color_Settings";
+            this.checkedListBox_Color_Settings.Size = new System.Drawing.Size(153, 148);
+            this.checkedListBox_Color_Settings.TabIndex = 17;
+            // 
             // button_Save_Settings
             // 
             this.button_Save_Settings.Location = new System.Drawing.Point(238, 216);
@@ -138,7 +151,7 @@
             this.button_Save_Settings.TabIndex = 16;
             this.button_Save_Settings.Text = "Save";
             this.button_Save_Settings.UseVisualStyleBackColor = true;
-            this.button_Save_Settings.Click += new System.EventHandler(this.button_Save_Settings_Click);
+         
             // 
             // checkedListBox_RoundShapes
             // 
@@ -158,20 +171,6 @@
             this.checkedListBox_RoundShapes.Name = "checkedListBox_RoundShapes";
             this.checkedListBox_RoundShapes.Size = new System.Drawing.Size(153, 148);
             this.checkedListBox_RoundShapes.TabIndex = 15;
-            // 
-            // checkedListBox_Color_Settings
-            // 
-            this.checkedListBox_Color_Settings.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.checkedListBox_Color_Settings.FormattingEnabled = true;
-            this.checkedListBox_Color_Settings.Items.AddRange(new object[] {
-            "Red",
-            "Green",
-            "Blue"});
-            this.checkedListBox_Color_Settings.Location = new System.Drawing.Point(604, 32);
-            this.checkedListBox_Color_Settings.Name = "checkedListBox_Color_Settings";
-            this.checkedListBox_Color_Settings.Size = new System.Drawing.Size(153, 148);
-            this.checkedListBox_Color_Settings.TabIndex = 17;
-            
             // 
             // form_MainGame
             // 
