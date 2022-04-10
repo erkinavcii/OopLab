@@ -1,0 +1,11 @@
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\obj\Debug\Ooplab_1.Properties.Resources.resources
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\obj\Debug\Ooplab-1.csproj.GenerateResource.cache
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\obj\Debug\Ooplab-1.csproj.CoreCompileInputs.cache
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\bin\Debug\Ooplab-1.exe.config
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\bin\Debug\Ooplab-1.exe
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\bin\Debug\Ooplab-1.pdb
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\obj\Debug\Ooplab-1.exe
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\obj\Debug\Ooplab-1.pdb
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\obj\Debug\Ooplab-1.csproj.AssemblyReference.cache
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\obj\Debug\Ooplab-1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Erkin\source\repos\Ooplab-1\Ooplab-1\obj\Debug\OOP2Lab1.form_LogIn.resources

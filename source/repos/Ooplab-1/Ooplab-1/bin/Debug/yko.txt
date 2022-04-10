@@ -1,0 +1,8 @@
+Normal
+11
+12
+Triangle
+Square
+Rectangle
+Cube
+Octagon
