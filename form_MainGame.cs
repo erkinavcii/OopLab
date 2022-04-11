@@ -8,6 +8,7 @@ namespace OOP2Lab1
     public partial class form_MainGame : Form
     {
         private form_Settings settingsForm;
+        private form_Manage manageForm;
         public form_MainGame()
         {
             InitializeComponent();
@@ -20,6 +21,11 @@ namespace OOP2Lab1
             settingsForm.ShowDialog();
             
         }
-       
+
+        private void button_Manage_Click(object sender, EventArgs e)
+        {
+            manageForm = new form_Manage();
+            manageForm.ShowDialog();
+        }
     }
 }
