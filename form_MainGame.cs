@@ -9,6 +9,7 @@ namespace OOP2Lab1
     {
         private form_Settings settingsForm;
         private form_Manage manageForm;
+        private form_AboutUs about;
         public form_MainGame()
         {
             InitializeComponent();
@@ -26,6 +27,13 @@ namespace OOP2Lab1
         {
             manageForm = new form_Manage();
             manageForm.ShowDialog();
+        }
+
+        private void button_About_Us_Click(object sender, EventArgs e)
+        {
+            about = new form_AboutUs();
+            about.ShowDialog();
+            about.TopMost=true;
         }
     }
 }
