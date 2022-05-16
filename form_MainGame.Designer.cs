@@ -31,6 +31,7 @@
             this.button_Settings = new System.Windows.Forms.Button();
             this.button_Manage = new System.Windows.Forms.Button();
             this.button_About_Us = new System.Windows.Forms.Button();
+            this.button_Help = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_Settings
@@ -66,12 +67,23 @@
             this.button_About_Us.UseVisualStyleBackColor = true;
             this.button_About_Us.Click += new System.EventHandler(this.button_About_Us_Click);
             // 
+            // button_Help
+            // 
+            this.button_Help.Location = new System.Drawing.Point(431, 505);
+            this.button_Help.Name = "button_Help";
+            this.button_Help.Size = new System.Drawing.Size(194, 73);
+            this.button_Help.TabIndex = 3;
+            this.button_Help.Text = "Help";
+            this.button_Help.UseVisualStyleBackColor = true;
+            this.button_Help.Click += new System.EventHandler(this.button_Help_Click);
+            // 
             // form_MainGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1100, 675);
+            this.Controls.Add(this.button_Help);
             this.Controls.Add(this.button_About_Us);
             this.Controls.Add(this.button_Manage);
             this.Controls.Add(this.button_Settings);
@@ -88,5 +100,6 @@
         private System.Windows.Forms.Button button_Settings;
         private System.Windows.Forms.Button button_Manage;
         private System.Windows.Forms.Button button_About_Us;
+        private System.Windows.Forms.Button button_Help;
     }
 }

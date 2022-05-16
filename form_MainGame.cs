@@ -1,4 +1,5 @@
-﻿using System;
+﻿using qqqq2;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -10,6 +11,8 @@ namespace OOP2Lab1
         private form_Settings settingsForm;
         private form_Manage manageForm;
         private form_AboutUs about;
+        private Form_Help help;
+
         public form_MainGame()
         {
             InitializeComponent();
@@ -34,6 +37,14 @@ namespace OOP2Lab1
             about = new form_AboutUs();
             about.ShowDialog();
             about.TopMost=true;
+        }
+
+        private void button_Help_Click(object sender, EventArgs e)
+        {
+            help = new Form_Help();
+            help.ShowDialog();
+            help.TopMost = true;
+
         }
     }
 }
