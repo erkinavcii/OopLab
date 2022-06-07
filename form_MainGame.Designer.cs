@@ -31,6 +31,8 @@
             this.button_Settings = new System.Windows.Forms.Button();
             this.button_Manage = new System.Windows.Forms.Button();
             this.button_About_Us = new System.Windows.Forms.Button();
+            this.button_help = new System.Windows.Forms.Button();
+            this.button_Game = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_Settings
@@ -66,12 +68,36 @@
             this.button_About_Us.UseVisualStyleBackColor = true;
             this.button_About_Us.Click += new System.EventHandler(this.button_About_Us_Click);
             // 
+            // button_help
+            // 
+            this.button_help.Location = new System.Drawing.Point(431, 479);
+            this.button_help.Margin = new System.Windows.Forms.Padding(4);
+            this.button_help.Name = "button_help";
+            this.button_help.Size = new System.Drawing.Size(194, 81);
+            this.button_help.TabIndex = 3;
+            this.button_help.Text = "Help";
+            this.button_help.UseVisualStyleBackColor = true;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
+            // 
+            // button_Game
+            // 
+            this.button_Game.Location = new System.Drawing.Point(696, 256);
+            this.button_Game.Margin = new System.Windows.Forms.Padding(4);
+            this.button_Game.Name = "button_Game";
+            this.button_Game.Size = new System.Drawing.Size(194, 81);
+            this.button_Game.TabIndex = 4;
+            this.button_Game.Text = "Game";
+            this.button_Game.UseVisualStyleBackColor = true;
+            this.button_Game.Click += new System.EventHandler(this.button_Game_Click);
+            // 
             // form_MainGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1100, 675);
+            this.Controls.Add(this.button_Game);
+            this.Controls.Add(this.button_help);
             this.Controls.Add(this.button_About_Us);
             this.Controls.Add(this.button_Manage);
             this.Controls.Add(this.button_Settings);
@@ -88,5 +114,7 @@
         private System.Windows.Forms.Button button_Settings;
         private System.Windows.Forms.Button button_Manage;
         private System.Windows.Forms.Button button_About_Us;
+        private Button button_help;
+        private Button button_Game;
     }
 }
