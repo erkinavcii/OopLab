@@ -75,7 +75,7 @@
             this.Controls.Add(this.button_About_Us);
             this.Controls.Add(this.button_Manage);
             this.Controls.Add(this.button_Settings);
-            this.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "form_MainGame";
             this.Text = "Main Game";
