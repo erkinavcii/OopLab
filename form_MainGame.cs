@@ -13,7 +13,10 @@ namespace OOP2Lab1
         private form_Settings settingsForm;
         private form_Manage manageForm;
         private form_AboutUs about;
+        private Form_Game game;
+        private Form_Help help;
         private List<User> users = new List<User>() { };
+
         public form_MainGame()
         {
             InitializeComponent();
@@ -151,6 +154,19 @@ namespace OOP2Lab1
                 }
             }
             return null;
+        }
+
+        private void button_help_Click(object sender, EventArgs e)
+        {
+            help=new Form_Help();
+            help.ShowDialog();
+        }
+
+        private void button_Game_Click(object sender, EventArgs e)
+        {
+           game = new Form_Game();
+           game.ShowDialog();
+           
         }
     }
 }
