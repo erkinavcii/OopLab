@@ -14,19 +14,32 @@ using System.Xml.Serialization;
 
 namespace OOP2Lab1
 {
-    public partial class form_Manage : Form
+    public partial class form_Manage :Form
     {
-        private List<string> usernames = new List<string>() { "ali","veli","49","50", "ali" };
-        private bool admin=true;
+        private List<User> users = new List<User>() { };
+        private form_MainGame mainGameForm=new form_MainGame();
+        private form_SignUp signUpForm;
+        private form_UserUpdate userUpdateForm;
+        public string theUsername;
+        
         public form_Manage()
         {
+            
             InitializeComponent();
-
-            if (admin == true)
+            theUsername = form_LogIn.enteredUsername;
+            if (theUsername=="admin")
             {
                 groupBox_Admin_Manager.Visible = true;
                 set_Users_To_ListBox();
-                get_Usernames_From_Xml_File();
+            }
+            else
+            {
+                groupBox_Admin_Manager.Visible = false;
+                users= mainGameForm.GetAllUsers();
+                User user = mainGameForm.getUser(theUsername);
+                this.Hide();
+                userUpdateForm = new form_UserUpdate(user);
+                userUpdateForm.ShowDialog();
             }
             
         }
@@ -37,10 +50,12 @@ namespace OOP2Lab1
         }
         private void set_Users_To_ListBox()
         {
+            mainGameForm=new form_MainGame();
+            users=mainGameForm.GetAllUsers();
             listBox_Usernames.Items.Clear();
-            foreach(string user in usernames)
+            foreach(User user in users)
             {
-                listBox_Usernames.Items.Add(user);
+                listBox_Usernames.Items.Add(user.Username);
             }
         }
         private void update_User_Information()
@@ -50,26 +65,28 @@ namespace OOP2Lab1
 
         private void button_Add_New_User_Click(object sender, EventArgs e)
         {
-            //Erkinin sign upuna gidecek.
+            signUpForm = new form_SignUp(mainGameForm);
+            signUpForm.ShowDialog();
+            set_Users_To_ListBox();
         }
 
         private void button_Delete_User_Click(object sender, EventArgs e)
         {
-            usernames.Remove(listBox_Usernames.SelectedItem.ToString());
+            users.Clear();
+            mainGameForm.RemoveTheUser((string)listBox_Usernames.SelectedItem);
             set_Users_To_ListBox();
-            // kullanıcı xmlden de silinecek.
         }
         private void button_Update_User_Click(object sender, EventArgs e)
         {
-            //Update
-        }
-        private void get_Usernames_From_Xml_File()
-        {
-            //string path = System.IO.Directory.GetCurrentDirectory() + "\\users.xml";
-            //XmlSerializer serializer=new XmlSerializer(typeof(User));
-            //FileStream stream = File.OpenRead(path);
-            //var result = (User)(serializer.Deserialize(stream));
-            //Console.WriteLine();
+            foreach(User user in users)
+            {
+                if(user.Username == listBox_Usernames.SelectedItem)
+                {
+                    userUpdateForm = new form_UserUpdate(user);
+                    userUpdateForm.ShowDialog();
+                }
+            }
+            set_Users_To_ListBox();
         }
     }
 }
