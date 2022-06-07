@@ -109,17 +109,17 @@ namespace OOP2Lab1
                 if (rand_num % 2 == 0)
                 {
                     Board[rand_num % gridSize, rand_num2 % gridSize] = 1;
-                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\circlegreen.png");
+                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\circlegreen.png");
                 }
                 else if (rand_num % 3 == 0)
                 {
                     Board[rand_num % gridSize, rand_num2 % gridSize] = 2;
-                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\squarered.png");
+                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\squarered.png");
                 }
                 else
                 {
                     Board[rand_num % gridSize, rand_num2 % gridSize] = 3;
-                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\trianglered.png");
+                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\trianglered.png");
                 }
                     
 
@@ -150,32 +150,32 @@ namespace OOP2Lab1
                 if (rand_num % 4 == 0&& Board[rand_num % gridSize, rand_num2 % gridSize]==0)
                 {
                     Board[rand_num % gridSize, rand_num2 % gridSize] = 1;
-                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\circlegreen.png");
+                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\circlegreen.png");
                 }
                 else if (rand_num % 3 == 0&& Board[rand_num % gridSize, rand_num2 % gridSize]==0)
                 {
                     Board[rand_num % gridSize, rand_num2 % gridSize] = 2;
-                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\squarered.png");
+                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\squarered.png");
                 }
                 else if (rand_num % 2 == 0&& Board[rand_num % gridSize, rand_num2 % gridSize]==0)
                 {
                     Board[rand_num % gridSize, rand_num2 % gridSize] = 3;
-                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\trianglered.png");
+                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\trianglered.png");
                 }
                 else if(rand_num%5==0&& Board[rand_num % gridSize, rand_num2 % gridSize]==0)
                 {
                     Board[rand_num % gridSize, rand_num2 % gridSize] = 1;
-                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\circlegreen.png");
+                    BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\circlegreen.png");
                 }
                 else if(rand_num%6==0&& Board[rand_num % gridSize, rand_num2 % gridSize] == 0)
                     {
                         Board[rand_num % gridSize, rand_num2 % gridSize] = 4;
-                        BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\circlered.png");
+                        BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\circlered.png");
                     }
                 else
                     {
                         Board[rand_num % gridSize, rand_num2 % gridSize] = 2;
-                        BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\squarered.png");
+                        BoardPanels[rand_num % gridSize, rand_num2 % gridSize].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\squarered.png");
                     }
                         
                 }
@@ -191,22 +191,22 @@ namespace OOP2Lab1
                 
               if (Board[x,y]==1)
                 {
-                        BoardPanels[x,y].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\circlegreen.png");
+                        BoardPanels[x,y].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\circlegreen.png");
                         Board[x, y] = 0;
                 }
               if (Board[x,y]==2)
                 {
-                        BoardPanels[x,y].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\squarered.png");
+                        BoardPanels[x,y].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\squarered.png");
                         Board[x, y] = 0;
                 }
                if (Board[x,y]==3)
                 {
-                        BoardPanels[x,y].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\squarered.png");
+                        BoardPanels[x,y].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\squarered.png");
                         Board[x, y] = 0;
                 }
                if(Board[x,y]==4)
                 {
-                       BoardPanels[x, y].BackgroundImage = Image.FromFile(@"C:\Users\Erkin\Desktop\oopresim\circlered.png");
+                       BoardPanels[x, y].BackgroundImage = Image.FromFile(@"C:\Users\ibrah\source\repos\OOP2Lab1\OOP2Lab1\circlered.png");
                         Board[x, y] = 0;
                 }
 
